@@ -1,4 +1,4 @@
-angular.module('app.controllers', []).controller('buttonController', function($scope, $timeout) {
+angular.module('app').controller('buttonController', function($scope, $timeout) {
 
   $scope.buttonText = "Submit";
   $scope.isLoading = "Loading...";
