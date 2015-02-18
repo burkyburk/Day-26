@@ -1,4 +1,4 @@
-angular.module('app').controller('buttonController', function($scope, $timeout) {
+angular.module('app.controllers', []).controller('buttonController', function($scope, $timeout) {
 
   $scope.buttonText = "Submit";
   $scope.isLoading = "Loading...";
@@ -15,14 +15,14 @@ angular.module('app').controller('buttonController', function($scope, $timeout) 
 
   $scope.showOrNot = true;
 
-  $scope.onClick = function(tabNum) {
+  $scope.onClick = function(tabNumber) {
     console.log('click');
-    if(tabNum === 1) {
+    if(tabNumber === 1) {
       $scope.show1 = !$scope.show1;
       $scope.show2 = false;
       $scope.show3 = false;
     }
-    else if(tabNum === 2) {
+    else if(tabNumber === 2) {
       $scope.show2 = !$scope.show2;
       $scope.show1 = false;
       $scope.show3 = false;
@@ -36,7 +36,7 @@ angular.module('app').controller('buttonController', function($scope, $timeout) 
     console.log($scope.showOrNot);
   };
 
-}).controller('likeButtonCtrl', function($scope) {
+}).controller('likeButtonController', function($scope) {
 
   $scope.count = 0;
   $scope.like = 'Likes';
